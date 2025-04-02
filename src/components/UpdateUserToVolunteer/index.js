@@ -13,7 +13,7 @@ const UpdateUserToVolunteer = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:3001/users', {
+        const response = await fetch('https://major-project-backend-4kbj.onrender.com/users', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -54,7 +54,7 @@ const UpdateUserToVolunteer = () => {
   const handlePromote = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:3001/users/${id}/updateRole`, {
+      const response = await fetch(`https://major-project-backend-4kbj.onrender.com/users/${id}/updateRole`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

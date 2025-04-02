@@ -28,7 +28,7 @@ const EditEvent = () => {
 
     setTimeout(async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/api/users?search=${query}`);
+        const res = await axios.get(`https://major-project-backend-4kbj.onrender.com/api/users?search=${query}`);
         if (type === 'manager') setManagerResults(res.data);
         if (type === 'volunteer') setVolunteerResults(res.data);
       } catch (err) {
@@ -51,7 +51,7 @@ const EditEvent = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:3001/api/events/${event._id}`, {
+      await axios.put(`https://major-project-backend-4kbj.onrender.com/api/events/${event._id}`, {
         ...event,
         managers,
         volunteers

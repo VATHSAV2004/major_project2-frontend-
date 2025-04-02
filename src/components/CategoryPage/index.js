@@ -13,7 +13,7 @@ const CategoryPage = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/events/${categoryId}`);
+        const response = await fetch(`https://major-project-backend-4kbj.onrender.com/events/${categoryId}`);
         const data = await response.json();
         console.log("Fetched Events:", data); // ✅ Check fetched data structure
         setEvents(data);

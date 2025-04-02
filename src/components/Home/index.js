@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://localhost:3001/events-by-category');
+        const response = await fetch('https://major-project-backend-4kbj.onrender.com/events-by-category');
         const data = await response.json();
         setEventsByCategory(data);
       } catch (error) {

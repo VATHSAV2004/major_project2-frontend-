@@ -8,7 +8,7 @@ const EditEventCard = ({ event }) => {
 
   const handleDelete = async () => {
     try {
-      await fetch(`http://localhost:3001/api/events/${event.id}`, { method: "DELETE" });
+      await fetch(`https://major-project-backend-4kbj.onrender.com/api/events/${event.id}`, { method: "DELETE" });
       alert("Event deleted");
       window.location.reload();
     } catch (error) {

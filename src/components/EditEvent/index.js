@@ -31,7 +31,7 @@ const EditEvent = () => {
     const fetchEvent = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:3001/api/events/${id}`);
+        const res = await axios.get(`https://major-project-backend-4kbj.onrender.com/api/events/${id}`);
         console.log('Fetched event data:', res.data);
 
         setEvent({
@@ -58,7 +58,7 @@ const EditEvent = () => {
   const searchManagers = async (query) => {
     if (!query) return;
     try {
-      const res = await axios.get(`http://localhost:3001/api/users/managers?search=${query}`);
+      const res = await axios.get(`https://major-project-backend-4kbj.onrender.com/api/users/managers?search=${query}`);
       setManagerSearchResults(res.data);
     } catch (err) {
       console.error('Failed to search managers:', err);
@@ -68,7 +68,7 @@ const EditEvent = () => {
   const searchVolunteers = async (query) => {
     if (!query) return;
     try {
-      const res = await axios.get(`http://localhost:3001/api/users/volunteers?search=${query}`);
+      const res = await axios.get(`https://major-project-backend-4kbj.onrender.com/api/users/volunteers?search=${query}`);
       setVolunteerSearchResults(res.data);
     } catch (err) {
       console.error('Failed to search volunteers:', err);
@@ -98,7 +98,7 @@ const EditEvent = () => {
   const handleSave = async () => {
     setLoading(true);
     try {
-      await axios.put(`http://localhost:3001/api/events/${id}`, {
+      await axios.put(`https://major-project-backend-4kbj.onrender.com/api/events/${id}`, {
         ...event,
         managers,
         volunteers,

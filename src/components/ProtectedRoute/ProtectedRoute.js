@@ -14,7 +14,7 @@ const ProtectedRoute = ({ element, allowedRoles }) => {
       }
 
       try {
-        const response = await fetch("http://localhost:3001/auth/verify", {
+        const response = await fetch("https://major-project-backend-4kbj.onrender.com/auth/verify", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

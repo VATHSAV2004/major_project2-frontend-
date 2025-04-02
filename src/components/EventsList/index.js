@@ -11,7 +11,7 @@ const EventsList = ({ userRole }) => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/events");
+        const response = await axios.get("https://major-project-backend-4kbj.onrender.com/api/events");
         setEvents(response.data);
       } catch (err) {
         console.error("Failed to fetch events:", err);
@@ -23,7 +23,7 @@ const EventsList = ({ userRole }) => {
   const handleDelete = async (eventId) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        await axios.delete(`http://localhost:3001/api/events/${eventId}`);
+        await axios.delete(`https://major-project-backend-4kbj.onrender.com/api/events/${eventId}`);
         setEvents(events.filter((event) => event._id !== eventId));
       } catch (err) {
         console.error("Failed to delete event:", err);

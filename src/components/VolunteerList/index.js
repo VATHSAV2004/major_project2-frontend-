@@ -13,7 +13,7 @@ const VolunteerList = () => {
     const fetchVolunteers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:3001/volunteers', {
+        const response = await fetch('https://major-project-backend-4kbj.onrender.com/volunteers', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

@@ -7,7 +7,7 @@ const AddManager = () => {
   useEffect(() => {
     const fetchManagers = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/users");
+        const response = await fetch("https://major-project-backend-4kbj.onrender.com/api/users");
         const data = await response.json();
         setManagers(data);
       } catch (error) {
